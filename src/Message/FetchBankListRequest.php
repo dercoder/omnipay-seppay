@@ -21,8 +21,7 @@ class FetchBankListRequest extends AbstractRequest
     {
         $uri = $this->createUri('api/banks/all');
         $response = $this->httpClient
-            ->post($uri, $this->createHeaders())
-            ->setBody(json_encode($data), 'application/json')
+            ->post($uri, $this->createHeaders(), $data)
             ->send();
 
         $data = json_decode($response->getBody(true), true);

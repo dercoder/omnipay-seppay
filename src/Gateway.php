@@ -52,6 +52,50 @@ class Gateway extends AbstractGateway
     }
 
     /**
+     * Get SepPay API username.
+     *
+     * @return string
+     */
+    public function getUsername()
+    {
+        return $this->getParameter('username');
+    }
+
+    /**
+     * Set SepPay API username.
+     *
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function setUsername($value)
+    {
+        return $this->setParameter('username', $value);
+    }
+
+    /**
+     * Get SepPay API password.
+     *
+     * @return string
+     */
+    public function getPassword()
+    {
+        return $this->getParameter('password');
+    }
+
+    /**
+     * Set SepPay API password.
+     *
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function setPassword($value)
+    {
+        return $this->setParameter('password', $value);
+    }
+
+    /**
      * @param array $parameters
      *
      * @return AbstractRequest|FetchBankListRequest

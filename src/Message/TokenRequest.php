@@ -26,8 +26,7 @@ class TokenRequest extends AbstractRequest
     {
         $uri = $this->createUri('token');
         $response = $this->httpClient
-            ->post($uri)
-            ->setBody(json_encode($data), 'application/json')
+            ->post($uri, [], $data)
             ->send();
 
         $data = json_decode($response->getBody(true), true);
