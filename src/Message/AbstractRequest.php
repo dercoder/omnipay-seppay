@@ -12,11 +12,6 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
     protected $endpoint = 'https://api.seppay.net';
 
     /**
-     * @var TokenResponse
-     */
-    protected static $accessToken;
-
-    /**
      * @return string
      */
     protected function getEndpoint()
@@ -136,10 +131,6 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
      */
     protected function getAccessToken()
     {
-        if (static::$accessToken) {
-            return static::$accessToken;
-        }
-
         $request = new TokenRequest($this->httpClient, $this->httpRequest);
         $request->initialize($this->getParameters());
 
@@ -150,7 +141,7 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
             throw new InvalidResponseException('Token request failed');
         }
 
-        return static::$accessToken = $response;
+        return $response;
     }
 
     /**

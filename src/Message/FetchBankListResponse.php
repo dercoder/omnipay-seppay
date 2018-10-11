@@ -3,6 +3,7 @@
 namespace Omnipay\SepPay\Message;
 
 use Omnipay\SepPay\Bank;
+use \Omnipay\Common\Message\AbstractResponse;
 
 class FetchBankListResponse extends AbstractResponse
 {

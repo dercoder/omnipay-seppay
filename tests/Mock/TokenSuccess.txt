@@ -1,0 +1,15 @@
+HTTP/1.1 200 OK
+Cache-Control: no-cache
+Pragma: no-cache
+Content-Type: application/json;charset=UTF-8
+Expires: -1
+Server: Microsoft-IIS/10.0
+X-Powered-By: ASP.NET
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Headers: Content-Type, Authorization, AccountGuid, Accept, X-Requested-With, X-Your-Extra-Header-Key, Origin,Cache-Control
+Access-Control-Allow-Methods: GET, HEAD, POST, PUT, DELETE
+Access-Control-Allow-Credentials: true
+Access-Control-Max-Age: 1728000
+Date: Thu, 11 Oct 2018 20:14:49 GMT
+
+{"access_token":"zC8sZbOve-bOhfMTndKqDf2vdsQHz4zNhCaIl","token_type":"bearer","expires_in":86399,"accountId":"wpkxf7f4zx8o95ba","Role":"account",".issued":"Thu, 11 Oct 2018 20:12:10 GMT",".expires":"Fri, 12 Oct 2018 20:12:10 GMT"}

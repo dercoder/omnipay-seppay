@@ -2,6 +2,8 @@
 
 namespace Omnipay\SepPay\Message;
 
+use \Omnipay\Common\Message\AbstractResponse;
+
 class TokenResponse extends AbstractResponse
 {
     /**

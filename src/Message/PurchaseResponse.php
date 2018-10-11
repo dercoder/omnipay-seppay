@@ -2,6 +2,8 @@
 
 namespace Omnipay\SepPay\Message;
 
+use \Omnipay\Common\Message\AbstractResponse;
+
 class PurchaseResponse extends AbstractResponse
 {
     /**
@@ -17,7 +19,7 @@ class PurchaseResponse extends AbstractResponse
      */
     public function isPending()
     {
-        return true;
+        return (bool)$this->getTransactionReference();
     }
 
     /**
@@ -121,7 +123,7 @@ class PurchaseResponse extends AbstractResponse
      */
     public function getSourceCurrency()
     {
-        return isset($this->data['SourceCurrency']) ? $this->data['SourceCurrencyCode'] : null;
+        return isset($this->data['SourceCurrencyCode']) ? $this->data['SourceCurrencyCode'] : null;
     }
 
     /**
